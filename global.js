@@ -6,6 +6,7 @@
     }
   });
 
+
   safari.application.addEventListener("command", function(event) {
     var activeBrowserWindow, currentTime, shareUrl, title, url;
 
@@ -13,10 +14,17 @@
       activeBrowserWindow = safari.application.activeBrowserWindow;
       url = activeBrowserWindow.activeTab.url;
       title = activeBrowserWindow.activeTab.title;
+      content = safari.application.activeBrowserWindow.activeTab.page;
       currentTime = new Date().getTime();
-      shareUrl = "https://share.flipboard.com/flipit/load?v=1.0&url=" + url + "&title=" + title + "&t=" + currentTime;
-      return activeBrowserWindow.openTab().url = shareUrl;
+
+      shareUrl = "https://share.flipboard.com/bookmarklet/popout?v=2.0" + "&title=" + encodeURIComponent(title) + "&url=" + encodeURIComponent(url);
+      tab = safari.application.openBrowserWindow().activeTab;
+
+      return tab.url = shareUrl;
+      
     }
   });
 
 }).call(this);
+
+

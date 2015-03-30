@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Cheng Lou</string>
 	<key>Builder Version</key>
-	<string>8536.28.10</string>
+	<string>10600.5.15</string>
 	<key>CFBundleDisplayName</key>
 	<string>Flip it</string>
 	<key>CFBundleIdentifier</key>
@@ -39,10 +39,17 @@
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>Start</key>
+			<array>
+				<string>global.js</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Description</key>
 	<string>Flipboard extension for adding a stuff on the web to your personal magazine.</string>
+	<key>DeveloperIdentifier</key>
+	<string>R62S9PGG5V</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
